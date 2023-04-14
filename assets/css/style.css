@@ -1,0 +1,242 @@
+@font-face {
+    font-family: karla;
+    src: url(../fonts/Karla-VariableFont_wght.ttf);
+}
+
+:root{
+    --text-color: #323A45;
+    --brand-color: #848484;
+    --bottom: 20px;
+    
+}
+
+
+
+/* ----------------general styles---------------------- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.wrapper{
+    font-family: "karla", Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+    padding: 2rem 6rem;
+}
+
+img{
+    max-width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.4rem;
+}
+
+h1{
+    font-size: 2rem;
+}
+
+h4{
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+h5{
+    font-size: 1.4rem;
+    margin: 1rem 0;
+}
+
+p{
+    font-size: 1.4rem;
+}
+
+/*--------------nav----------------------------------- */
+header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+    align-items: baseline;
+}
+
+
+.burger-menue{
+    display: none;
+}
+
+
+nav a{
+padding: 20px;
+}
+
+/*-------------main styles----------------------------*/
+.shop{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+}
+
+.fullsize{
+grid-column: 1 / 4;
+}
+
+.price{
+    display: flex;
+    justify-content: space-between;
+}
+
+article p{
+    color: var(--brand-color);
+}
+
+article{
+    margin-bottom: var(--bottom);
+}
+
+/*
+article img:hover{
+    opacity: 10%;
+}
+*/
+
+article img{
+    margin-bottom: -4px;
+}
+
+figure{
+    background-color: rgb(250, 248, 248);
+}
+
+article figure img:hover{
+    opacity: 10%;
+}
+
+/*---------------bottom-section---------------------- */
+
+.bottom{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 35% 17% 25% 20%;
+  height: 30rem;
+}
+
+.bottom a{
+    font-weight: 700;
+    line-height: 3rem;
+}
+
+.bottom span{
+    font-style: italic;
+}
+
+.bottom div{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30rem;
+}
+
+.bottom p{
+    line-height: 3rem;
+}
+
+
+/* ---------------FOOTER -------------------*/
+
+footer{
+    color: var(--brand-color);
+}
+
+
+
+/*------------NEWSLETTER------------*/
+
+
+form{
+        
+    display: flex;
+    flex-direction: column;
+    height: 20rem;
+    width: 30rem;
+    padding: 3rem;
+}
+
+input{
+    margin: 2px 0 10px 0;
+}
+
+fieldset{
+    padding:15px;
+    border-radius: 15px;
+    padding: 20px 30px;
+}
+
+label{
+    font-family: 'Karla', Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+}
+
+input[type=submit]{
+    border-radius: 15px;
+    padding: 2px 4px;
+    color: #323A45;
+    background-color: rgb(250, 223, 188);
+    border-color:  rgb(250, 223, 188);
+    font-family: 'Karla', Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+}
+
+
+/*-------------- MEDIA QUERIES --------------*/
+
+
+@media only screen and (max-width:600px) {
+    
+    .wrapper{
+        padding: 2rem 4rem;
+    }
+    
+
+    /* ------------ MAIN ---------------*/
+
+    .shop{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .bottom{
+        display: flex;
+        flex-direction: column;
+        height: 50rem;
+        margin-top: 5rem;
+    }
+
+    /* -------- NAV -----*/
+
+    .burger {
+        height: 5px;
+        width: 30px;
+        background-color: black;
+        margin: 2px;
+        border-radius: 10px;
+      }
+
+      .burger-wrapper {
+        position: fixed;
+        top: 30px;
+        right: 30px;
+        display: none;
+      }
+
+      .burger-menue{
+        display: block;
+    }
+    
+
+}
+
